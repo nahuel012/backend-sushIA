@@ -411,8 +411,6 @@ Nigiri es un asistente virtual inteligente capaz de mantener conversaciones natu
 - 🔍 Estado de orden: "¿Cómo va mi pedido #123?"
 - ❌ Cancelar orden: "Necesito cancelar mi orden #123"
 - ⏰ Horarios: "¿Hasta qué hora están abiertos?"
-- 🚚 Delivery: "¿Hacen entregas en [tu dirección]?"
-- 💳 Pagos: "¿Qué métodos de pago aceptan?"
 
 ### Funcionalidades Principales
 
