@@ -1,0 +1,8 @@
+# Backend/.gitignore
+# Dependencies
+/node_modules
+/logs
+/coverage
+
+# Environment variables
+.env

@@ -1,0 +1,95 @@
+[
+  {
+    "name": "get_menu",
+    "description": "Obtener el menú completo",
+    "strict": false,
+    "parameters": {
+      "type": "object",
+      "properties": {},
+      "required": []
+    }
+  },
+  {
+    "name": "create_order",
+    "description": "Crear un nuevo pedido",
+    "strict": false,
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "customer_name": {
+          "type": "string",
+          "description": "Nombre del cliente"
+        },
+        "items": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "product_id": {
+                "type": "string"
+              },
+              "quantity": {
+                "type": "integer"
+              }
+            }
+          }
+        },
+        "delivery_type": {
+          "type": "string",
+          "enum": ["delivery", "pickup"]
+        },
+        "delivery_address": {
+          "type": "string"
+        },
+        "scheduled_time": {
+          "type": "date"
+        }
+      },
+      "required": ["customer_name", "items", "delivery_type"]
+    }
+  },
+  {
+    "name": "check_order_status",
+    "description": "Consultar estado de un pedido",
+    "strict": false,
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "order_number": {
+          "type": "integer"
+        },
+        "customer_name": {
+          "type": "string"
+        }
+      },
+      "required": ["order_number", "customer_name"]
+    }
+  },
+  {
+    "name": "cancel_order",
+    "description": "Cancelar un pedido pendiente",
+    "strict": false,
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "order_number": {
+          "type": "integer"
+        },
+        "customer_name": {
+          "type": "string"
+        }
+      },
+      "required": ["order_number", "customer_name"]
+    }
+  },
+  {
+    "name": "get_current_time",
+    "description": "Obtener la hora actual del restaurante",
+    "strict": false,
+    "parameters": {
+      "type": "object",
+      "properties": {},
+      "required": []
+    }
+  }
+]
